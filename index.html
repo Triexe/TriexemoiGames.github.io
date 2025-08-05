@@ -3,150 +3,59 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Triexemoi Troll Tower</title>
+  <title>Home</title>
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: url('cover.png') no-repeat center center/cover;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right top, rgba(255,255,255,0.3), rgba(0,191,255,0.2)), url('cover.png') no-repeat center center/cover;
       color: white;
-    }
-
-    .overlay {
-      background-color: rgba(0,0,0,0.6);
+      backdrop-filter: blur(8px);
       min-height: 100vh;
-      padding: 20px;
     }
-
     nav {
+      background: rgba(255,255,255,0.2);
+      backdrop-filter: blur(10px);
       display: flex;
-      justify-content: space-around;
-      background: rgba(0,0,0,0.8);
-      padding: 10px 0;
+      justify-content: center;
+      padding: 15px;
       position: sticky;
       top: 0;
-      z-index: 100;
+      box-shadow: 0 2px 10px rgba(255,255,255,0.1);
     }
-
     nav a {
       color: white;
       text-decoration: none;
+      margin: 0 20px;
       font-weight: bold;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    section {
-      padding: 40px 20px;
-      display: none;
-    }
-
-    section.active {
-      display: block;
-    }
-
-    h1, h2 {
-      text-align: center;
-    }
-
-    .buttons a {
-      display: inline-block;
-      margin: 10px;
-      background: #00bfff;
-      color: white;
-      padding: 10px 20px;
+      padding: 8px 15px;
       border-radius: 8px;
-      text-decoration: none;
+      transition: background 0.3s;
     }
-
-    .login-form {
-      max-width: 400px;
-      margin: 0 auto;
-      background: rgba(255,255,255,0.1);
-      padding: 20px;
-      border-radius: 10px;
+    nav a:hover {
+      background: rgba(255,255,255,0.2);
     }
-
-    .login-form input {
-      width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-      border: none;
-      border-radius: 5px;
+    .container {
+      padding: 60px 20px;
+      text-align: center;
+      max-width: 800px;
+      margin: auto;
     }
-
-    .login-form button {
-      width: 100%;
-      padding: 10px;
-      background: #00bfff;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      font-size: 16px;
-    }
-
-    @media (max-width: 600px) {
-      h1 { font-size: 1.8em; }
-      h2 { font-size: 1.5em; }
+    h1 {
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
     }
   </style>
 </head>
 <body>
-  <div class="overlay">
-    <nav>
-      <a href="#" onclick="showSection('home')">🏠 Home</a>
-      <a href="#" onclick="showSection('login')">🔑 Login</a>
-      <a href="#" onclick="showSection('updates')">📌 Updates</a>
-      <a href="#" onclick="showSection('howto')">🕹️ How to Play</a>
-    </nav>
-
-    <section id="home" class="active">
-      <h1>Triexemoi Troll Tower</h1>
-      <p style="text-align:center;font-size:1.2em;">Jump up the steps to the top of the tower! <strong>-UPDATE-</strong></p>
-      <div class="buttons" style="text-align:center;">
-        <a href="https://www.roblox.com/games/100199208359497/Triexemoi-Troll-Tower" target="_blank">🎮 Play on Roblox</a>
-        <a href="https://discord.gg/xaS6VwnfEa" target="_blank">💬 Join Discord</a>
-      </div>
-    </section>
-
-    <section id="login">
-      <h2>Login</h2>
-      <form class="login-form" onsubmit="fakeLogin(event)">
-        <input type="text" placeholder="Username" required>
-        <input type="password" placeholder="Password" required>
-        <button type="submit">Login</button>
-      </form>
-    </section>
-
-    <section id="updates">
-      <h2>Latest Updates</h2>
-      <ul style="text-align:center;list-style:none;font-size:1.1em;">
-        <li>- Added new slap effects!</li>
-        <li>- Improved tower stability</li>
-        <li>- UI polish and minor fixes</li>
-      </ul>
-    </section>
-
-    <section id="howto">
-      <h2>How to Play</h2>
-      <p style="max-width:600px;margin:auto;text-align:center;font-size:1.1em;">
-        Step on the tower blocks and climb your way to the top! Watch out for troll buttons, traps, and more.
-      </p>
-    </section>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="auth.html">Login+Register</a>
+    <a href="update.html">Update</a>
+    <a href="howto.html">How to Play</a>
+  </nav>
+  <div class="container">
+    <h1>Welcome to Triexemoi Slap Tower</h1>
+    <p>Jump up the steps to the top of the tower! -UPDATE-</p>
   </div>
-
-  <script>
-    function showSection(id) {
-      document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
-      document.getElementById(id).classList.add('active');
-    }
-
-    function fakeLogin(event) {
-      event.preventDefault();
-      alert('Login successful (not really 😄)');
-    }
-  </script>
 </body>
 </html>
