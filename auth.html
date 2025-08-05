@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login + Register</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right top, rgba(255,255,255,0.3), rgba(0,191,255,0.2)), url('cover.png') no-repeat center center/cover;
+      color: white;
+      backdrop-filter: blur(8px);
+      min-height: 100vh;
+    }
+    nav {
+      background: rgba(255,255,255,0.2);
+      backdrop-filter: blur(10px);
+      display: flex;
+      justify-content: center;
+      padding: 15px;
+      position: sticky;
+      top: 0;
+      box-shadow: 0 2px 10px rgba(255,255,255,0.1);
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+      padding: 8px 15px;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+    nav a:hover {
+      background: rgba(255,255,255,0.2);
+    }
+    .container {
+      padding: 60px 20px;
+      text-align: center;
+      max-width: 800px;
+      margin: auto;
+    }
+    form {
+      max-width: 400px;
+      margin: auto;
+      text-align: left;
+    }
+    input, button {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: none;
+    }
+    button {
+      background: #00bfff;
+      color: white;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="auth.html">Login+Register</a>
+    <a href="update.html">Update</a>
+    <a href="howto.html">How to Play</a>
+  </nav>
+  <div class="container">
+    <h2>Login</h2>
+    <form onsubmit="alert('Login successful (not really 😄)'); return false;">
+      <input type="text" placeholder="Username" required>
+      <input type="password" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+
+    <h2 style="margin-top:40px;">Register</h2>
+    <form>
+      <input type="text" placeholder="New Username" required>
+      <input type="password" placeholder="New Password" required>
+      <button type="submit">Register</button>
+    </form>
+  </div>
+</body>
+</html>
