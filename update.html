@@ -5,52 +5,81 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Game Updates</title>
   <style>
-    body, nav, a, .container, h1 {
-      /* same styles as previous pages */
-    }
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to right top, rgba(255,255,255,0.3), rgba(0,191,255,0.2)), url('cover.png') no-repeat center center/cover;
-      color: white;
-      backdrop-filter: blur(8px);
-      min-height: 100vh;
-    }
-    nav {
-      background: rgba(255,255,255,0.2);
-      backdrop-filter: blur(10px);
-      display: flex;
-      justify-content: center;
-      padding: 15px;
-      position: sticky;
-      top: 0;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 20px;
-      font-weight: bold;
-      padding: 8px 15px;
-      border-radius: 8px;
-      transition: background 0.3s;
-    }
-    nav a:hover {
-      background: rgba(255,255,255,0.2);
-    }
-    .container {
-      padding: 60px 20px;
-      text-align: center;
-      max-width: 800px;
-      margin: auto;
-    }
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-    li {
-      margin: 10px 0;
-    }
-  </style>
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right top, rgba(255,255,255,0.6), rgba(0,191,255,0.1)), url('cover.png') no-repeat center center/cover;
+  color: black;
+  backdrop-filter: blur(8px);
+  min-height: 100vh;
+  padding: 0;
+}
+nav {
+  background: rgba(255,255,255,0.3);
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+nav a {
+  color: black;
+  text-decoration: none;
+  margin: 6px 10px;
+  font-weight: bold;
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+nav a:hover {
+  background: rgba(0,0,0,0.1);
+}
+.container {
+  padding: 40px 20px;
+  text-align: center;
+  max-width: 95%;
+  margin: auto;
+}
+h1, h2, p, li {
+  color: black;
+  text-shadow: none;
+}
+form {
+  max-width: 400px;
+  margin: auto;
+  text-align: left;
+}
+input, button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+button {
+  background: #00bfff;
+  color: white;
+  font-weight: bold;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+li {
+  margin: 10px 0;
+}
+@media screen and (min-width: 600px) {
+  .container {
+    max-width: 800px;
+  }
+}
+</style>
 </head>
 <body>
   <nav>
@@ -60,12 +89,24 @@
     <a href="howto.html">How to Play</a>
   </nav>
   <div class="container">
-    <h1>Latest Updates</h1>
-    <ul>
-      <li>- New Slap Effects</li>
-      <li>- Tower stability improved</li>
-      <li>- UI enhancements</li>
-    </ul>
+    
+        <h1>Latest Updates</h1>
+        <ul>
+          <li>- New Slap Effects</li>
+          <li>- Tower stability improved</li>
+          <li>- UI enhancements</li>
+        </ul>
+        
+    
+<div style="margin-top: 50px;">
+  <a href="https://discord.gg/xaS6VwnfEa" target="_blank"
+     style="background: #5865F2; color: white; padding: 12px 24px;
+            border-radius: 8px; text-decoration: none; font-weight: bold;
+            display: inline-block;">
+    Join our Discord Community
+  </a>
+</div>
+
   </div>
 </body>
 </html>
